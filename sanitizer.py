@@ -13,5 +13,9 @@ if("\'" in password):
         if(password[i]=='\''):
             password=password[0:i]+password[i+1:len(password)]
         i=i+1
-print(username+"\n");
-print(password+"\n");
+if(username[-1]=='\\'):
+    username=username[0:len(username)-1]
+if(password[-1]=='\\'):
+    password=password[0:len(password)-1]    
+print(username+"\n")
+print(password+"\n")
